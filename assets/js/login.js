@@ -35,7 +35,6 @@ $(function(){
                 username:$username,
                 password:$password,},
             success:function(res){
-                console.log(res,$username);
                 if(res.status === 0){
                     layer.msg(res.message);
                 }
@@ -52,7 +51,7 @@ $(function(){
             url:'/api/login',
             data:$(this).serialize(),
             success:function(res){
-                console.log(res);
+
                 if(res.status !== 0){
                     layer.msg(res.message);
                     return;
